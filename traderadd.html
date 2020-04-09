@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">    
+
+	<link rel="stylesheet" href="css/style.css"/>
+    
+	<link rel="stylesheet" href="vendor/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="vendor/jquery-ui-1.12.1/jquery-ui.min.js">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="vendor/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>   
+  <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+  <script src="js/jquery.steps.js"></script>
+  <script src="js/main1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
+
+<style>
+ .multiselect {
+  width: 200px;
+}
+.inner .form-row .form-holder {
+    width: 100%;
+    padding: 0 1px;
+    margin-left:10px;
+    margin-bottom: 21px;
+    
+}
+.inner .form-row .form-holder .fnt{
+  font-size:15px;
+  padding:5px;
+}
+.inner .form-row .form-holder input,text {
+    width: 100%;
+    padding: 8px 1px;
+
+}
+.inner .form-row .form-holder  .input-group .input-group-addon{
+  height:20px 
+  !important;
+  margin-left:0px !important;
+}
+.selectBox {
+  position: relative;
+}
+.paddma{
+  width:75px;
+  
+  margin-bottom:8px;
+  font-weight: 300;
+  font-style: normal;
+  padding-left:0px !important;
+}
+.paddma1{
+  width:auto;
+  margin-left:-15px;
+  font-size:16px;
+ font-style: normal;
+ font-weight:300px !important ;
+  padding-left:0px !important;
+  padding:0px;
+}
+.paddmarb{
+  width:52%;
+  margin-bottom:8px;
+  border-radius: 5px;
+padding:0px;
+height:35px;
+
+}
+
+#framework{
+  width:250px;
+}
+.paddmar{
+  width:52%;
+  margin-bottom:8px;
+  border-radius: 5px;
+  font-weight:300px !important ;
+border:solid 1px lightgray;
+height:35px;
+}
+.paddmar1{
+  width:70%;
+  font-size:16px;
+  margin-bottom:8px;
+  border-radius: 5px;
+border:solid 1px lightgray;
+height:35px;
+text-align:left;
+}
+.bordr{
+  border-radius: 5px;
+  border-color:lightgray;
+}
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+#framework{
+  width:50px !important;
+  padding:0px !important;
+
+}
+.inner .form-row .form-holder4 {
+    width: 50%;
+    padding: 0 13px;
+    margin-bottom: 21px;  
+}
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+.form-row .form-holder .wordbrk1{
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+
+  white-space: normal;
+  max-width:180px !important;
+border:0px;
+ }
+  @media screen and (min-device-width: 1008px) {
+  .wizard-v1-content   {
+    margin-left:140px;
+    width: 800PX;
+    height:1450px !important;
+  }
+
+  
+}
+  .form-register .steps li::before {
+    position: absolute;;
+	content: "";
+	background: rgb(238, 236, 236);
+
+	height: 4px;
+	width: 90px;
+		top: 35%;
+    	left: 10%;
+}
+
+
+.form-register .steps li:last-child::before {
+  content: none;
+  width: 0px;
+}
+
+.form-register .steps li.current::after {
+    width: 0px;
+	height: 0px;
+}
+.form-register .steps li a .step-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.form-register .steps li.current a .step-icon,
+.form-register .steps li.current a:active .step-icon,
+.form-register .steps .done::before,
+.form-register .steps li.done a .step-icon,
+.form-register .steps li.done a:active .step-icon {
+ background: rgb(77, 148, 228); 
+}
+
+.form-row1 .form-holder .opti{
+    height:18px;width:40px; margin-right:0px; margin-left:0px;
+ font-size:30px;
+   
+}
+.lblradio{
+    font-size: 16px;font-weight: 400;
+}
+.form-register .steps li::after {
+  background: rgb(255, 255, 255);
+  left: 0%;
+}
+
+@media screen and (max-width: 575px) {
+	.wizard-v1-content .wizard-form {
+	    padding: 10px 5px;
+	    width: auto;
+  }
+  .main_container .formtitle h1{
+    font-size:26px;
+   
+  }
+  .h3f{
+  font-size:18px;
+  font-weight: bold;
+}
+  .form-row1 .form-holder .opti{
+    height:18px;width:30px; margin-right:0px; margin-left:0px;
+ font-size:28px;
+   
+}
+.bott{
+  margin-bottom:0px !important;
+}
+  .paddmarb{
+
+  margin-bottom:10px !important;
+
+  }
+  .paddma1{
+  width:160px ;
+  }
+  .paddmar1{
+  width:40%;
+  }
+	.form-register .content {
+	    padding: 42px 40px 43px 40px;
+	}
+	.form-register .steps li, .form-register .steps li.current {
+		padding-right: 35px;
+	}
+	.form-register .steps li::before {
+		width: 65px;
+		top: 35%;
+    	left: 10%;
+	}
+	.form-register .steps li a .title span {
+		display: block;
+		font-size: 12px;
+	}
+	.form-register .steps li.current::after {
+		left: 10%;
+	}
+}
+.micinb{
+ width:80px !important;padding:12px !important;height:15px !important;display:inline-block !important;
+}
+.sidepanel  {
+		 height:215%;
+		 }
+.lbltrad{
+  background:transparent;border:none;
+}	   
+</style>
+</head>
+<body>
+
+    <div id="wrapper" class="wrapper">
+        <!---Top menu-->
+        <div class="top_navbar">		
+          <div class="openbtn" onclick="openNav()">
+           <div class="one"></div>
+           <div class="two"></div>
+           <div class="three"></div>
+          </div>
+          <div class="top_menu">
+          <div class="logo"><img src="images/logo3.jpg"/><br></div>
+      
+          <!---------Top nav Icons-->
+          <ul>  
+            <div class="dropdown">	
+              <li class="dropbtn">			
+              <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <span class="glyphicon glyphicon-user"></span>
+              </a>   
+              <div class="dropdown-menu dropdown-content dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown1">   
+                <a href="accountprofile.html">Account Info</a>
+                <a href="#">Payment Info</a>
+                <a href="#">Forgot Password</a>  
+               </div>
+              </li>
+              </div>
+             
+            <!-----Account Icon-->      
+          
+            <div class="dropdown">	
+            <li class="dropbtn">
+              <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                <span class="glyphicon glyphicon-bell alertNotificacao"></span>
+                <span id="notificationsBadge" class='badgeAlert'>3</span>
+              </a>
+          
+              <div class="dropdown-menu notification dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown">
+                <div class="topc" >              
+                <h5 class="noticard-title">Notifications</h5>            
+                </div>       
+                 
+                <div class="card noticard">
+                  <div class="card-body">
+                  <h5 class="card-title  noticard-title">Special title treatment</h5>
+                  <p class="card-text noticart-text">With supporting text below as a natural lead-in to additional.</p>
+                   
+                  </div>
+                  <div class="notisection-title-divider"></div>
+                </div>
+                
+                <div class="card noticard" >
+                  <div class="card-body">
+                  <h5 class="card-title noticard-title">Special title treatment</h5>
+                  <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>
+                   
+                  </div>
+                  <div class="notisection-title-divider"></div>
+                </div>
+                
+                <div class="card noticard" >
+                  <div class="card-body">
+                  <h5 class="card-title noticard-title">Special title treatment</h5>
+                  <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>
+                   
+                  </div>
+                </div>
+                </div>
+                    
+              </li>
+            </div>
+          
+             
+            
+            <!-----Logout Icon-->      
+              <div class="dropdown">	
+            <li class="dropbtn">			
+              <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              <span class="glyphicon glyphicon-arrow-right"></span>
+              </a> 
+             </li>
+            </div>
+              
+              </ul>		
+            </div>
+            </div>
+          
+          
+      
+          <!-- Sidebar -->
+          <div id="mySidepanel" class="sidepanel">  
+          <ul class="sidebar-nav" id="">     
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          
+          <li><a href="traders.html" >Trades</a></li>
+              <li><a href="vendor.html">Vendors</a></li>
+          </ul>
+        </div>
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+          <div class="row">
+            <div class="col-md-12">
+            <div class="main_container">				
+		    <!--div class="page-content" style="background-color: rgba(0, 0, 0, 0.15)"-->
+
+			 <div class="wizard-v1-content">			
+				<div class="wizard-form">					
+					<form class="form-register" id="form-register" action="confirmform.html" method="post">					
+						<div id="form-total">
+
+                            <!---Section1 Business Details------------->
+							<h2>							
+								<span class="step-icon"></span>								
+							</h2>						
+							<section>
+                                <div class="inner">
+								    <div class="clearfix"></div>
+                                    <br>
+
+                                    <div class="form-row5">
+                                      <div class="form-holder4 col-md-7 col-xs-12">
+                                      <label for="name" class="paddma1" style="font-weight:300;width:160px !important">Confirmation No*  </label>                                    
+                                      <input type="label" class="paddmar1 lbltrad" placeholder="Enter Name" style="width:30px !important" id="tconfirmno" value="1" name="tconfirmno">
+                                     </div>
+                                     <div class="form-holder4 col-md-5 col-xs-12">
+                                      <label class="paddma1" for="e" style="font-weight:300">Date* </label>                                   
+                                      <input class="paddmar1" type="text"  class=" datet" style="margin-right:0px;float:right;" id="tconfirmdate" name="tconfirmdate" >
+                                     
+                                      <br><br><br><br>
+                                    </div>
+                                    
+								                </div><br><br><br>
+
+                                 <!--SECTION 1 -->
+															<div class="clearfix"></div>
+                                    <div class="form-row">
+									            	<div class="form-holder form-holder-2">
+										          	<label for="name">You would like to:</label>
+                                            <select name="bussinesstype" id="bussinesstype" class="form-control" style="margin-top:0;height:39px;">
+                                                <option  style="align-items:top" value="" disabled selected>Select</option>
+                                                <option value="tradeoption">Trade</option>
+                                                <option value="brokeroption">Brokerage</option>    
+                                            </select>											
+								                		</div>
+									                    </div><br><br><br>
+								
+
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+									                  	<label for="name">Trader Name</label>
+										                    <select name="tradername" id="tradername" class="form-control" style="margin-top:0;margin-bottom: 0px !important;height:36px;">
+                                           <option  style="align-items:top" value="Susi Commodities Pvt. Ltd." >Trader Name</option>
+                                        </select>                                       
+                                            <label name="tradeaddress" class="form-control lbltrad wordbrk1" id="tradeaddress"  style="height:100px;" >
+                                              Susi commodities
+                                              Susi@gmail.com
+                                              70, Alagai Nagar,
+                                              Madurai
+                                            </label><br><br><br>
+                                            <label for="name" class="fnt">Commision </label>
+                                            <fieldset class="micf form-holder" style="width:auto">
+                                              <input type="text"  name="brokercomm_per" id="brokercomm_per1" placeholder=" " class="micin"   min="1" max="99" style="width: 100%;" >
+  
+                                             <span> %   </span></input> <span style="margin-left:3%;margin-right:3%;font-weight:bold"> or</span>
+                                              <input  type="text"  name="brokercomm_rs" id="brokercomm_rs1" placeholder="" class="micin" min="0" max="1000"  style="width: 100%;"/>
+                                              <span> Rs/bale</span>   
+  
+                                            </fieldset>
+                                                                             
+                                        </div>
+                                    </div><br><br><br>
+
+                                    
+                                <div class="form-row1">
+                                            <div class="form-holder">
+                                               
+                                                    <label class="lbltwo">Do you have a Trader ?</label><br>
+                                                    <fieldset class="micf form-holder" style="width:auto">
+                                                    <input type="radio"  id="trader_yes" class="opti" name="trader_yes" value="trader_yes" ><label class="lblradio">Yes</label>
+                                                    <input type="radio"  id="trader_yes"  class="opti" style="margin-left:20px" name="trader_yes" value="trader_no"><label class="lblradio">No</label>
+                                                </fieldset>
+                                            </div>
+                                </div><br><br><br><br>
+
+                                <div class="form-row">
+								            		<div class="form-holder form-holder-2">
+									            	<label for="name">Trader Name</label>
+								            		<select name="tradernameb" id="tradernameb" class="form-control" style="margin-top:0;height:39px;margin-bottom: 0px;">                                           
+                                 <option  style="align-items:top" value="Susi Commodities Pvt. Ltd." >Trader Name</option>
+                                </select>
+                                <label name="tradedetails" class="form-control lbltrad" style="height:100px;" id="tradedetails">
+                                      
+                                </label>
+                                       
+                                </div>
+                                </div>
+                                </div>
+                                <div style="height:40px">
+
+                                </div>
+                            </section>
+                            <h2>
+                              <span class="step-icon"></span>
+                            </h2>
+                            <section>                               
+                                                            
+                                    <h3  class="h3f">Details for Seller Confirmation</h3>
+                                    <div class="section-title-divider"></div><br>
+                                    <div class="inner">
+								                   <div class="clearfix"></div>                                  
+									 
+                                    <h3  class="h3f">Seller</h3>                                        
+								    
+
+									                <div class="form-row">
+									              	<div class="form-holder form-holder-2">		
+									              	<select name="tsellername" id="tsellername" class="form-control" style="height:36px;margin-bottom: 0px ">
+                                        <option  style="align-items:top" value="MRC">Seller Name</option>
+                                        </select>  
+                                        <label name="sellerdetails" class="form-control lbltrad wordbrk1" id="sellerdetails"  style="height:100px;" >
+                                          Susi commodities
+                                          Susi@gmail.com
+                                          70, Alagai Nagar,
+                                          Madurai
+                                        </label>                                         
+                                                   
+                                                    
+                                        </div>
+                                </div>
+                               
+							<!--<section>-->
+
+ <!-----------------------------------------------------------Section2 Quality Details------------------------------------------------>
+                                <h3  class="h3f">Quality parameters</h3>
+                               
+                                  <div class="clearfix"></div>
+                                                
+              
+                                <div class="form-row5">
+                                    <div class="form-holder4 col-md-6 col-xs-12">
+              
+                                                          <label for="name" class="paddma">State</label>
+                                                    
+                                                          <select class="paddmar" name="tstate_qual" id="tstate_qual" style="height:36px;">
+                                                              <option value="state" disabled selected>State</option>
+                                                              <option>Maharashtra</option>
+                                                              <option>MadhyaPradesh</option>
+                                                              <option>Gujarat</option>
+                                                              <option>Andhrapradesh</option>
+                                                              <option>Orissa</option>
+                                                          </select>
+                                             </div>
+                                      <div class="form-holder4 col-md-6 col-xs-12">
+                                                      <label for="name" class="paddma">Station</label>
+                                                      
+                                                      <select class="paddmar" name="tstation" id="tstation"  style="height:36px;">
+                                                          <option value="station" disabled selected>Station</option>
+                                                          <option>Ghatanji</option>
+                                                          <option>Sillod</option>
+                                                          <option>Chikhli</option>
+                                                          <option>Adoni</option>
+                                                      </select>
+                                                      </div>
+                                        </div>
+              
+                                        <div class="form-row5">
+                                                      <div class="form-holder4 col-md-6 col-xs-12">
+                                                        <label class="paddma" for="name">Variety</label>                                      
+                                                          <select class="paddmar" name="tvariety" id="tvariety" style="height:36px;">
+                                                              <option value="" disabled selected>Variety</option>
+                                                              <option>DCH</option>
+                                                              <option>MCU5</option>
+                                                              <option>MECH</option>
+                                                              <option>SANKAR-6</option>
+                                                              <option>V-797</option>
+                                                          </select>
+                                                         
+                                                        </div>
+                                                        <div class="form-holder4 col-md-6 col-xs-12">
+                                                          <div class="form-holder form-holder-2">
+                                                              <label class="paddma" for="name">HSN Code </label>
+                                                         
+                                                              <select class="paddmar" name="thsn" id="thsn"  style="height:36px;">
+                                                               <option value="" disabled selected>HSN</option>
+                                                               <option>52010015</option>
+                                                               <option>52010017</option>
+                                                              <option>52010019</option>
+                                                               </select>
+                                                           </div>                                  
+                                                  </div>
+              
+                                              <div class="form-row5">
+                                                    <div class="form-holder4 col-md-6 col-xs-12">
+                                                    <label for="name" class="paddma">Grade</label>                                    
+                                                    <input type="text" class="paddmar" placeholder="grade"  id="tgrade" name="tgrade">
+                                                   </div>
+                                                   <div class="form-holder4 col-md-6 col-xs-12">
+                                                      <label for="name" class="paddma">Staple</label>                                  
+                                                      <select name="tstaple-b" class="paddmar" id="tstaple-b"  style="height:36px;">
+                                                          <option value="" disabled selected>Staple</option>
+                                                          <option>22</option>
+                                                          <option>23</option>
+                                                          <option>28</option>
+                                                           <option>28.5</option>
+                                                           <option>29</option>
+                                                            <option>29.5</option>
+                                                            <option>30</option>
+                                                            <option>30.5</option>
+                                                            <option>31</option>
+                                                            <option>31.5</option>
+                                                            <option>32</option>
+                                                            <option>36</option>
+                                                      </select>                                    
+                                                  </div>
+                                              </div>
+              
+                                              <div class="form-row5">
+                                                  <div class="form-holder4 col-md-6 col-xs-12">
+                                                  <label for="name" class="paddma">GPT</label>                                  
+                                                  <input type="number" class="paddmar" step="0.5" min="20" max="38" name="tgpt" id="tgpt" placeholder="gpt">
+                                                  </div>
+                                                  <div class="form-holder4 col-md-6 col-xs-12">
+                                                  <label for="name" class="paddma">GTex</label>                                   
+                                                    <input type="number" class="paddmar" step="0.5" min="10" max="36" name="tgtex-b" id="tgtex-b" >
+                                              </div>
+                                           </div>
+              
+                                             <div class="form-row5 bott">
+                                                  <div class="form-holder4 col-md-6 col-xs-12  form-inline">
+                                                  <label for="name" class="paddma col-xs-6 ">Moist %</label>
+                                                      
+                                                <div class="input-group  col-xs-6  form-inline paddmarb" style="padding:0px !important;margin-bottom:0px;padding:0px">
+                                                      <input type="number" class=" form-control" step="0.5" min="6" max="15" style="border-radius:0px;" id="tmositure-s" name="tmositure-s">
+                                                      <span class="input-group-addon "><i class="fa fa-percent"></i></span>
+                                                  </div>
+                                                </div>
+                                                <div class="form-holder4 col-md-6 col-xs-12 form-group form-inline" >
+                                                  <label for="name"  class="paddma  col-xs-6 " style="padding:0px !important;">Trash %</label>                                  
+                                                   <div class="input-group col-xs-6  form-inline paddmarb" style="margin-bottom:0px;padding:0px">
+                                                      
+                                                          <input type="number"   class="form-control"  step="0.5" min="1" max="8" style="border-radius:0px;padding-bottom:0px" id="ttrash-s" name="ttrash-s" >
+                                                          <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                      </div>
+                                                  </div>
+                                                  </div>
+              
+              
+                                          <div class="form-row5">
+                                                    
+                                                      <div class="form-holder4 col-md-6 col-xs-12  form-inline">
+                                                      <label for="name" class="paddma  col-xs-6 " style="padding:0px !important;"> Price </label>                                                  
+                                                      <div class="input-group col-xs-6  form-inline paddmarb" style="padding:0px !important;margin-top:0px;padding:0px">
+                                                          <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                                          <input type="number"  class="form-control" step="1" style="border-radius:0px" id="tprice_s" name="tprice_s">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-holder4 col-md-6 col-xs-12  form-inline">
+                                                    <label for="name" class="paddma col-xs-6 ">Mic&nbsp;</label>
+                                                   
+                                                        <fieldset class="micf col-xs-12  paddmarb" style="height:40px;width:auto;margin-top:0px;padding:0px">    
+                                                            <input type="number"  name="tmicfrom-s" id="tmicfrom-s" placeholder="" class="micinb"  style="width:50px!important" id="min" name="min" />
+                                                             &nbsp; to
+                                                            <input  type="number"  name="tmicto-s"   id="tmicto-s" placeholder="" class="micinb" style="width:50px!important" id="max"    name="max" />
+                                                          </fieldset>
+                                                     </div>
+                                         </div>
+                                        </div>
+                                        <h3  class="h3f">Payment Terms</h3>
+                           <div class="clearfix"></div>
+                               <div class="form-row">
+                           
+									<div class="form-holder form-holder-2">
+                                        
+                                            <select name="termpay_s" id="termpay_s" class="form-control"  style="height:36px;width:100%;">
+                                                <option value="Payment Terms" selected ></option>
+                                                <option value="full">Full</option>
+                                                <option value="partial">Partial</option>
+                                            </select>
+                                            <label for="name" class="fnt">First Payment</label><br>
+                                             <fieldset class="micf" style="width:auto">  First &nbsp;
+                                            <input type="text"  name="firstpay_s" id="firstpay_s" placeholder=" " class="micin"  id="firstpay_s" style="width: 180px;" name="firstpay_s" min="1" max="99" />
+                                             %  &nbsp;within
+                                            <input  type="text"  name="firstpayday_s" id="firstpayday_s" placeholder="" class="micin"  id="firstpayday_s"   style="width:180px;"  name="firstpayday_s" min="0" max="300"/>
+                                                Days
+                                          </fieldset>
+                                          <label for="name" class="fnt">Second Payment</label> <br>                
+                                            <fieldset class="micf col-md-5" style="width:100%">
+                                                Second
+                                            <input type="text"  name="secondpay_s" id="secondpay_s" placeholder=" " class="micin"  id="secondpay_s" name="secondpay_s" min="1" max="99" />
+                                             %  &nbsp;within
+                                            <input  type="text"  name="secondpayday_s" id="secondpayday_s" placeholder="" class="micin"  id="secondpayday_s"    name="secondpayday_s" min="0" max="300"/>
+                                                Days
+                                          </fieldset>                                       
+                               </div>                               
+                               </div>
+                               <h3  class="h3f"> Passing Terms</h3>
+                            <div class="form-row">
+                            
+                               <div class="form-holder form-holder-2">
+                                
+                                <select name="passing_b" id="passing_s" class="form-control" style="height:36px;">
+                                    <option value="" disabled selected>Weighment & Passing</option>
+                                    <option value="millweighment&millpassing">Mill Weighment & Mill Passing</option>
+                                    <option value="millweighment&spotpassing">Mill Weighment & Spot Passing</option>
+                                    <option value="spotweighment&millpassing">Spot Weighment & Mill Passing</option>
+                                    <option value="spotweighment&spotpassing">Spot Weighment & Spot Passing</option>
+                                </select>                               
+                            </div>
+                       </div>
+                     
+                       <h3  class="h3f">Is there a broker between you and Seller ?</h3>
+                           <div class="clearfix"></div>
+                       <div class="form-row1 ">
+                                <div class="form-holder">
+                                  
+                                      
+                                    <fieldset class="micf form-holder"   style="width:100%" >                                      
+                                        <input type="radio" class="opti"  id="seler_broker_yes" name="seler_broker_yes" value="seler_broker_yes" ><label class="lblradio">Yes</label>
+                                        <input type="radio"   class="opti" style="margin-left:20px" id="seler_broker_no" name="seler_broker_yes" value="seler_broker_no"><label class="lblradio">No</label>
+                                    </fieldset>
+                                </div>
+                             </div><br>
+
+                                <div class="form-row ">
+										<div class="form-holder form-holder-2">
+                                             <select name="tbrokername_b" id="tbrokername_b" class="form-control" style="margin-top:0;height:36px;">
+                                                <option  style="align-items:top" value="" disabled selected>Broker Name</option>
+                                                <option>Sanju Shah</option>
+                                                <option>Raju Shah</option>
+                                                <option>Sunil</option>
+                                            </select><br>
+                                            <label for="name" class="fnt">Commision </label>
+                                                                                         <fieldset class="micf" style="width:100%">
+                                            <input type="text"  name="brokercomm_per1" id="brokercomm_per1" placeholder=" " class="micin"   min="1" max="99" style="width: 100px;" />
+
+                                            %    &nbsp; &nbsp; or&nbsp;&nbsp;&nbsp;
+                                            <input  type="text"  name="brokercomm_rs1" id="brokercomm_rs1" placeholder="" class="micin" min="0" max="1000"/>
+                                                Rs/bale
+                                          </fieldset>										 
+                                        </div>
+                               </div>
+                               <h3  class="h3f">Notes</h3>
+                               <div class="clearfix"></div>
+                               <div class="form-row1">
+                                <div class="form-holder">
+                               
+                               <textarea cols="10" rows="3" class="form-control" placeholder="Notes" style="
+                               vertical-align:top !important;width:100%;text-align:left !important" name="tnotes" id="tnotes" value="">
+                             
+                             Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighme Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighment Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighme Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighment.
+                            </textarea>
+                                </div>
+                            </div>
+                            </div>
+                            </section>
+
+                            
+<!--------------------------------------------------------------------------------------------------------------->                            
+                            <h2>
+							              <span class="step-icon"></span>
+                            </h2>
+                         
+                            <section>                               
+                                                            
+                              <h3  class="h3f">Details for Buyer Confirmation</h3>
+                              <div class="section-title-divider"></div><br>
+                              <div class="inner">
+                             <div class="clearfix"></div>                                  
+             
+                              <h3  class="h3f">Buyer</h3>                                        
+              
+
+                            <div class="form-row">
+                            <div class="form-holder form-holder-2">		
+                            <select name="tbuyername" id="tsellername" class="form-control" style="height:36px;margin-bottom: 0px ">
+                                  <option  style="align-items:top" value="MRC">Buyer Name</option>
+                                  </select>  
+                                  <label name="buyerdetails" class="form-control lbltrad wordbrk1" id="buyerdetails"  style="height:100px;" >
+                                    Susi commodities
+                                    Susi@gmail.com
+                                    70, Alagai Nagar,
+                                    Madurai
+                                  </label>                                         
+                                             
+                                              
+                                  </div>
+                          </div>
+                         
+        <!--<section>-->
+
+<!-----------------------------------------------------------Section2 Quality Details------------------------------------------------>
+                          <h3  class="h3f">Quality parameters</h3>
+                         
+                            <div class="clearfix"></div>
+                                          
+        
+                            <div class="form-row5">
+                              <div class="form-holder4 col-md-6 col-xs-12">
+        
+                                                    <label for="name" class="paddma">State</label>
+                                              
+                                                    <select class="paddmar" name="tstate_qual" id="tstate_qualb" style="height:36px;">
+                                                        <option value="state" disabled selected>State</option>
+                                                        <option>Maharashtra</option>
+                                                        <option>MadhyaPradesh</option>
+                                                        <option>Gujarat</option>
+                                                        <option>Andhrapradesh</option>
+                                                        <option>Orissa</option>
+                                                    </select>
+                                       </div>
+                                <div class="form-holder4 col-md-6 col-xs-12">
+                                                <label for="name" class="paddma">Station</label>
+                                                
+                                                <select class="paddmar" name="tstation" id="tstation_b"  style="height:36px;">
+                                                    <option value="station" disabled selected>Station</option>
+                                                    <option>Ghatanji</option>
+                                                    <option>Sillod</option>
+                                                    <option>Chikhli</option>
+                                                    <option>Adoni</option>
+                                                </select>
+                                                </div>
+                                  </div>
+        
+                                  <div class="form-row5">
+                                                <div class="form-holder4 col-md-6 col-xs-12">
+                                                  <label class="paddma" for="name">Variety</label>                                      
+                                                    <select class="paddmar" name="tvariety_b" id="tvariety" style="height:36px;">
+                                                        <option value="" disabled selected>Variety</option>
+                                                        <option>DCH</option>
+                                                        <option>MCU5</option>
+                                                        <option>MECH</option>
+                                                        <option>SANKAR-6</option>
+                                                        <option>V-797</option>
+                                                    </select>
+                                                   
+                                                  </div>
+                                                  <div class="form-holder4 col-md-6 col-xs-12">
+                                                    <div class="form-holder form-holder-2">
+                                                        <label class="paddma" for="name">HSN Code </label>
+                                                   
+                                                        <select class="paddmar" name="thsn_b" id="thsn_b"  style="height:36px;">
+                                                         <option value="" disabled selected>HSN</option>
+                                                         <option>52010015</option>
+                                                         <option>52010017</option>
+                                                        <option>52010019</option>
+                                                         </select>
+                                                     </div>                                  
+                                            </div>
+        
+                                        <div class="form-row5">
+                                              <div class="form-holder4 col-md-6 col-xs-12">
+                                              <label for="name" class="paddma">Grade</label>                                    
+                                              <input type="text" class="paddmar" placeholder="grade"  id="tgrade_b" name="tgrade_b">
+                                             </div>
+                                             <div class="form-holder4 col-md-6 col-xs-12">
+                                                <label for="name" class="paddma">Staple</label>                                  
+                                                <select name="tstaple_b" class="paddmar" id="tstaple_b"  style="height:36px;">
+                                                    <option value="" disabled selected>Staple</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>28</option>
+                                                     <option>28.5</option>
+                                                     <option>29</option>
+                                                      <option>29.5</option>
+                                                      <option>30</option>
+                                                      <option>30.5</option>
+                                                      <option>31</option>
+                                                      <option>31.5</option>
+                                                      <option>32</option>
+                                                      <option>36</option>
+                                                </select>                                    
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-row5">
+                                            <div class="form-holder4 col-md-6 col-xs-12">
+                                            <label for="name" class="paddma">GPT</label>                                  
+                                            <input type="number" class="paddmar" step="0.5" min="20" max="38" name="tgpt" id="tgpt_b" placeholder="gpt">
+                                            </div>
+                                            <div class="form-holder4 col-md-6 col-xs-12">
+                                            <label for="name" class="paddma">GTex</label>                                   
+                                              <input type="number" class="paddmar" step="0.5" min="10" max="36" name="tgtex-b" id="tgtex-b" >
+                                        </div>
+                                     </div>
+        
+                                       <div class="form-row5">
+                                            <div class="form-holder4 col-md-6 col-xs-12 ">
+                                            <label for="name" class="paddma col-xs-6 ">Moist %</label>
+                                                
+                                          <div class="input-group  col-xs-6  form-inline paddmarb" style="padding:0px !important;margin-bottom:0px;padding:0px">
+                                                <input type="number" class=" form-control" step="0.5" min="6" max="15" style="border-radius:0px;" id="tmositure_b" name="tmositure_b">
+                                                <span class="input-group-addon "><i class="fa fa-percent"></i></span>
+                                            </div>
+                                          </div>
+                                          <div class="form-holder4 col-md-6 col-xs-12 " >
+                                            <label for="name"  class="paddma  col-xs-6 " style="padding:0px !important;">Trash %</label>                                  
+                                             <div class="input-group col-xs-6  form-inline paddmarb" style="margin-bottom:0px;padding:0px">
+                                                
+                                                    <input type="number"   class="form-control"  step="0.5" min="1" max="8" style="border-radius:0px;padding-bottom:0px" id="ttrash_b" name="ttrash_b" >
+                                                    <span class="input-group-addon"><i class="fa fa-percent"></i></span>
+                                                </div>
+                                            </div>
+                                          </div>
+        
+        
+                                    <div class="form-row5">
+                                              
+                                                <div class="form-holder4 col-md-6 col-xs-12  form-inline">
+                                                <label for="name" class="paddma  col-xs-6 " style="padding:0px !important;"> Price </label>                                                  
+                                                <div class="input-group col-xs-6  form-inline paddmarb" style="padding:0px !important;margin-top:0px;padding:0px">
+                                                    <span class="input-group-addon"><i class="fa fa-inr"></i></span>
+                                                    <input type="number"  class="form-control" step="1" style="border-radius:0px" id="tprice_b" name="tprice_b">
+                                                </div>
+                                            </div>
+                                            <div class="form-holder4 col-md-6 col-xs-12  form-inline">
+                                              <label for="name" class="paddma col-xs-6 ">Mic&nbsp;</label>
+                                             
+                                                  <fieldset class="micf col-xs-12  paddmarb" style="height:40px;width:auto;margin-top:0px;padding:0px">    
+                                                      <input type="number"  name="tmicfrom_b" id="tmicfrom_b" placeholder="" class="micinb"  style="width:50px!important" id="min" name="min" />
+                                                       &nbsp; to
+                                                      <input  type="number"  name="tmicto_B"   id="tmicto_b" placeholder="" class="micinb" style="width:50px!important" id="max"    name="max" />
+                                                    </fieldset>
+                                               </div>
+                                   </div>
+                                  </div>
+                                  <h3  class="h3f">Payment Terms</h3>
+                     <div class="clearfix"></div>
+                         <div class="form-row">
+                     
+            <div class="form-holder form-holder-2">
+                                  
+                                      <select name="termpay_s" id="termpay_s" class="form-control"  style="height:36px;width:100%;">
+                                          <option value="Payment Terms" selected >Payment Terms</option>
+                                          <option value="full">Full</option>
+                                          <option value="partial">Partial</option>
+                                      </select>
+                                     
+                                      <label for="name" class="fnt">First Payment</label><br>
+                                       <fieldset class="micf" style="width:auto">  First &nbsp;
+                                      <input type="text"  name="firstpay_b" id="firstpay_b" placeholder=" " class="micin"  id="firstpay_b" style="width: 180px;" name="firstpay_s" min="1" max="99" />
+                                       %  &nbsp;within
+                                      <input  type="text"  name="firstpayday_b" id="firstpayday_b" placeholder="" class="micin"  id="firstpayday_b"   style="width:180px;"  name="firstpayday_s" min="0" max="300"/>
+                                          Days
+                                    </fieldset>
+                                    <label for="name" class="fnt">Second Payment</label> <br>               
+                                      <fieldset class="micf col-md-5" style="width:100%">
+                                          Second
+                                      <input type="text"  name="secondpay_b" id="secondpay_b" placeholder=" " class="micin"   min="1" max="99" />
+                                       %  &nbsp;within
+                                      <input  type="text"  name="secondpayday_b" id="secondpayday_b" placeholder="" class="micin"   min="0" max="300"/>
+                                          Days
+                                    </fieldset>                                       
+                         </div>                               
+                         </div>
+                         <h3  class="h3f"> Passing Terms</h3>
+                      <div class="form-row">
+                      
+                         <div class="form-holder form-holder-2">
+                          
+                          <select name="passing_b" id="passing_s" class="form-control" style="height:36px;">
+                              <option value="" disabled selected>Weighment & Passing</option>
+                              <option value="millweighment&millpassing">Mill Weighment & Mill Passing</option>
+                              <option value="millweighment&spotpassing">Mill Weighment & Spot Passing</option>
+                              <option value="spotweighment&millpassing">Spot Weighment & Mill Passing</option>
+                              <option value="spotweighment&spotpassing">Spot Weighment & Spot Passing</option>
+                          </select>                               
+                      </div>
+                 </div>
+                              
+                               
+                 <h3  class="h3f">Is there a broker between you and Buyer ?</h3>
+                 <div class="clearfix"></div>
+                             
+                                   <div class="form-row1 ">
+                                    <div class="form-holder">
+                                  
+                                          
+                                        <fieldset class="micf form-holder"   style="width:100%" >                                      
+                                            <input type="radio"  id="trader_yes" class="opti"  id="seler_broker_yes_s" name="seler_broker_yes_s" value="seler_broker_yes"><label class="lblradio">Yes</label>
+                                            <input type="radio"  id="trader_no"  class="opti" style="margin-left:20px" id="seler_broker_no_s" name="seler_broker_yes_s" value="seler_broker_no"><label class="lblradio">No</label>
+                                        </fieldset>
+                                    </div>
+                                 </div><br>
+    
+                                    <div class="form-row ">
+                                            <div class="form-holder form-holder-2">
+                                               <!-- <label for="broker-name">Broker Name</label>-->
+    
+                                                <select name="tbrokername_s1" id="tbrokername_s1" class="form-control" style="margin-top:0;height:36px;">
+                                                    <option  style="align-items:top" value="" disabled selected>Broker Name</option>
+                                                    <option>Sanju Shah</option>
+                                                    <option>Raju Shah</option>
+                                                    <option>Sunil</option>
+                                                </select><br>
+                                                <label for="name" class="fnt">Commision </label>
+                                                 <fieldset class="micf" style="width:100%">
+                                                <input type="number"  name="brokercomm_per_s" id="brokercomm_per_s" placeholder=" " class="micin"   min="1" max="99" style="width: 100px;" />
+    
+                                                 %    &nbsp; &nbsp; or&nbsp;&nbsp;&nbsp;
+                                                <input  type="number"  name="brokercomm_rs_s" id="brokercomm_rs_s" placeholder="" class="micin" min="0" max="1000"/>
+                                                    Rs/bale
+    
+                                              </fieldset>
+                                             
+                                            </div>
+                                   </div>
+                            
+                                   <h3  class="h3f">Notes</h3>
+                                   <div class="clearfix"></div>
+                                   <div class="form-row1">
+                                    <div class="form-holder">
+                                   
+                                   <textarea cols="10" rows="3"  placeholder="Notes" style="
+                                   vertical-align:top !important;width:100%;text-align:left !important;margin-left:0px!important" wrap="virtual" 
+                                   name="tnotes_b" id="tnotes_b" >
+                                   Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighme Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighment Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighme Spot Passing and Mill WeighmentSpot Passing and Mill WeighmentSpot Passing and Mill Weighment.    </textarea>
+                                    </div>
+                                </div>
+                                </div>
+                                </section>
+
+                             
+
+
+                            <h2>
+							          	<span class="step-icon"></span>
+
+						              	</h2>
+                                <section>
+                                    <h3  class="h3f">Quantity and Dispatch Details</h3>
+									                  <div class="section-title-divider"></div><br><br>
+                                     <div class="clearfix"></div>
+
+                                    <div class="inner">
+								                  	<div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <label for="gstin-s">Quantity</label>
+
+                                            
+                                           <input type="number" class="form-control" step="10" min="100" max="5000"  placeholder="Bales" class="form-control"  name="tbales" id="tbales">
+                                           <br><input type="number" class="form-control" step="1" min="1" max="20" placeholder="Truck" class="form-control"  id="ttruck" name="ttruck">
+                                            </div><br>								
+                                    </div><br>
+                                        <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <label for="termdel">Terms of Delivery</label>
+                                                <select name="termdel" id="termdel" class="form-control" style="height:36px;">
+                                                    <option value="" disabled selected>Term of Delivery</option>
+                                                    <option value="spot">SPOT</option>
+                                                    <option value="for">FOR</option>
+                                                </select>
+                                        </div>
+                                    </div><br>
+								
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <label for="name">GST </label>                                             
+                                                    <input type="text" class="form-control" step="0.5" min="0" max="25" style="width:100%;border-radius:5px" placeholder="gst" name="tgst" id="tgst">                                                 
+                                        </div>
+                                    </div><br>
+                                    <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                        <label for="name">Dispatch Within</label>
+                                        <input type="number" class="form-control" step="1" min="1" max="100"  placeholder="Days" name="tdispatchdays" id="tdispatchdays" style="width: 100%;">                                          
+                                    </div>
+                                </div><br>
+                                <div class="form-row">
+                                    <div class="form-holder form-holder-2">
+                                            <label for="name"> Contact No for Delivery</label>
+                                            <input type="text" class="form-control"  placeholder="Delivery Contact" name="tmillgateno" id="tmillgateno">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-holder form-holder-2">
+                                            <label for="name">Weighbridge Contact No</label>
+                                            <input type="text" class="form-control"  placeholder="Weighbridge No" name="weighbridgeno" id="weighbridgeno">
+                                        </div>
+                                </div><br>
+                                <h3  class="h3f">Transit Insurance Details</h3><br>
+                                <div class="clearfix"></div>
+                                <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                  <label for="name">Whose Transit insurance do you want to use?</label><br>
+                                                        <select name="transinsur" id="transinsur" class="form-control" style="margin-top:0;height:39px;">
+                                                            <option  style="align-items:top" value="" disabled selected>Buyer</option>
+                                                            <option value="tradeoption">Seller</option>
+                                                            <option value="brokeroption">Trader</option>    
+                                                        </select>											
+                                </div>
+                              
+
+                              </div>
+                            
+                                <div class="form-row">
+									            	<div class="form-holder form-holder-2" >
+                                      
+                                        
+                                           <label name="insurance_details" class="form-control lbltrad wordbrk1" id="insurance_details"  style="border:none !important;height:100px;" >
+                                            Susi commodities
+                                            Susi@gmail.com
+                                            70, Alagai Nagar,
+                                            Madurai
+                                          </label>                                         
+                                                             
+                                          <div style="height:50px"></div>>
+                                    </div>
+                                    <br><br><br>
+                                </section>
+					
+
+
+
+
+<!-- SECTION 5 ------------------------------------------------------>
+<div class="clearfix"></div>
+<h2>						
+    <span class="step-icon"></span>						
+    </h2>
+    <section class=" tradereport col-md-12 col-xs-12 col-sm-12 col-lg-12" style="background-color: white;padding:0px">       
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators carousel-indicators-numbers"  >
+        <li data-target="#myCarousel" data-slide-to="0" class="">1</li>
+        <li data-target="#myCarousel" data-slide-to="1">2</li>
+      
+        </ol>
+        <div class="inner bordwhitew  tradereport" > 
+            <form method="post"  name="tradereportform" id="tradereportform" method="post" >                        
+            <div class="carousel-inner">
+    
+              <div class="item active tradereport col-xs-12"> 
+                       
+                    <div class="form-row table-responsive bordwhite col-xs-12 heigh" id="form1" 
+                     style="margin-left:10px;border:none;background-color:white;width:100% !important;height:1100px;overflow:auto !important;"> 
+    
+                      <table class="table" style="border:none;background-color:white;overflow: hidden !important;">
+                         <tbody style="border:none;">
+    
+                            <tr class="space-row bordwhite" style="border-spacing: 5px;">
+                              <th  class="reptitle text-center" style="text-align:center !important">SELLER CONFIRMATION </th>                          
+                             </tr>                        
+                              <!---section1-->
+                              <tr class="space-row col-xs-12" >                      
+                                <th class=" col-xs-12 col-sm-12">Con.no. </th>
+                                <td class=" col-xs-12 col-sm-12" id="tconfirmno-val"></td>	
+                             </tr>                        
+                         
+                            <tr class="space-row col-xs-12" >          									
+                                <th class="pull-right-lg  col-xs-12" >Date: </th>	
+                                <td class="pull-right-lg  col-xs-12" id="tconfirmdate-val"></td>
+                              </tr> 
+                 
+                             
+                          
+                             
+                             <tr class="space-row col-xs-12 col-md-12 tabl"> 
+                               <th clss="col-xs-12">To - Buyer: </th>
+                             </tr>
+                               
+                             <tr class="space-row  col-xs-12" > 
+                              <td class="paddrl">
+                              <p id="tradername-val" class="paddrl wordbrk"></p>
+                             </td>
+                             </tr>
+                 
+                             <tr class="space-row  col-xs-12" > 
+                             <td class="paddrl"
+                              id="tstate-val" class="awidt"><span><span>-</span>
+                              <td class="pl0 awidt" id="tpincode-val"></td></span></td>
+                              </tr>
+                          
+                              <tr class="space-row  col-xs-12" >
+                                <th class="col-xs-12">Dear sir,</th>                                                                                  
+                              </tr>
+                 
+                              <tr class="space-row  col-xs-12 tabl">
+                              <tr class="space-row col-xs-12 col-md-12">  
+                               <td class="paddrl"> <p class="wordbrk" style="font-weight:600">I am pleased to confirm having this day 
+                                 sold to you on account of my principals,</p></td>
+                              </tr>
+                              </tr>
+                 
+                              <tr class="space-row col-xs-12 col-md-12 tabl" >    
+                                <tr class="space-row col-xs-12 col-md-12">                                    
+                                 <td class="paddrl" style="font-weight:600;width:80px;" >Seller   </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;
+                                  <p id="tdoor_add-val2s" class="paddrl wordbrk"></p>
+                                  <span><th class="paddrl">,</th> </span> 
+                                  </td>
+                                <td id="tstate-val2s" class="paddrl">
+                                <span><th class="paddrl">,</th> </span> 
+            
+                                </td>
+                                <td id="tpincode-val2s" class="paddrl">
+                                  <span><th class="paddrl">,</th> </span> 
+                                  
+                                  </td>
+                                </tr>
+                              </tr>        
+                                     
+                              
+                                       <tr class="space-row col-xs-12 col-md-12 tabl" >  
+                                           
+                                         <tr class="space-row col-xs-12 col-md-12">                             
+                                          <td class="paddrl" style="font-weight:600;width:80px;" >Quality  </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;Station :</td><td id="tstation-val2" class="paddrl" >
+                                         <span><th class="paddrl">,</th> </span></td> 
+                 
+                                         <td class="paddrl" >State :</td><td id="tstate_qual-val" class="paddrl">
+                                         <span><th class="paddrl">,</th> </span></td>   
+                 
+                                         <td class="paddrl" >Variety :</td><td id="tvariety-val" class="paddrl">                           
+                                         <span><th class="paddrl">,</th> </span></td>   
+                                                                                 
+                                          <td class="paddrl">Staple :</td><td id="tstaple-s-val" class="paddrl">
+                                          <span><th class="paddrl">,</th> </span></td>  
+                                          
+                                          <td class="paddrl">Mic :</td><td id="tmicfrom-s-val" class="paddrl">                                    
+                                          <span><th class="paddrl">,</th> </span></td>   
+                 
+                                         <td class="paddrl">GPT :</td><td id="tgpt-val" class="paddrl ">
+                                         <span><th class="paddrl">,</th> </span></td>
+                 
+                                         <td class="paddrl ">Grade :</td><td id="tgrade-val " class=" paddrl ">
+                                         <span><th class="paddrl">,</th> </span></td>
+                 
+                                         <td class="paddrl">Trash :</td><td id="ttrash-val" class=" paddrl ">
+                                         <span><th class="paddrl">,</th> </span></td>
+                                       
+                                          <td class="paddrl">Mositure :</td><td id="tmositure-s-val" class="paddrl">
+                                         <span><th class="paddrl">,</th> </span> </td>     
+                                      </tr>
+                 
+                                        </tr>
+                                        
+                               
+                                     <tr class="space-row col-xs-12 col-md-12 tabl" >    
+                                       <tr class="space-row col-xs-12 col-md-12">                                    
+                                        <td class="paddrl" style="font-weight:600;width:80px;" >Quantity   </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;HSN :</td><td id="thsn-val" class="paddrl">
+                                       <span><th class="paddrl">,</th> </span> 
+                                       </td>                   
+                                       <td class="paddrl">Truck :</td><td id="ttruck-val" class="paddrl">
+                                       <span><th class="paddrl">,</th> </span> 
+                                       </td>
+                                       </tr>
+                                     </tr>
+                 
+                                    
+                                           
+                                          
+                                        <tr class="space-row col-xs-12 col-md-12 tabl">                                       
+                                         <th class="paddrl" style="width:80px;"> Dispatch  </th><td class="paddrl"   id="dispatchdays-valb" > <span style="font-weight:600">:</span> &nbsp;
+                                                                  
+                                        </td>
+                                        </tr>
+            
+                                        <tr class="space-row col-xs-12 col-md-12 tabl">                                      
+                                          <th class="paddrl">Price  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                        
+                                           <td id="tprice-valb" class="paddrl" >   
+                                            <span style="font-weight:600">: </span> &nbsp; Rs                                 
+                                          <span><td class="paddrl"> <p class="wordbrk" style="font-weight:600">
+                                           /- SPOT/CANDY + Lorry Freight + Transit Insurance + 5% GST.</p></td></span>
+                                          </td>
+                                         </tr>
+                    
+            
+                             
+            
+                 
+                 
+                                          <tr class="space-row col-xs-12 col-md-12 tabl">        
+                                           <th class="paddrl" style="width:80px;">Payment </th>
+                                         
+                                          <td class="paddrl"   id="tprice-valb"> 
+                                            <span style="font-weight:600">:</span> &nbsp;
+                                          </td>
+                                          </tr>
+                 
+                                       
+                                          <!--- <tr class="space-row bordwhite  col-xs-12 col-md-12 tabl" >
+                                              <th class="paddrl" style="width:80px;">Note </th>
+                                              <th class="wid">:</th><span><td id="tnotes-val2" class="pd0 awidt"></span>
+                                              <td id="ownercontact-val" class="awidt"></span></th>	</span></td>
+                                             </tr>--> 
+                                            
+                           
+                                             <tr class="space-row col-xs-12 ">
+                                              <th class="paddrl" style="width:80px;">Note :</th>
+                                              <td class="paddrl" >
+                                                <p id="tnotes-val" class="paddrl wordbrk"></p>
+                                              </td>
+                                              </tr>
+
+                                            <tr class="space-row ">
+                                             <tr class="space-row col-xs-12 col-md-12">  
+                                              <td class="paddrl" > <p class="wordbrk" style="font-weight:600">Expecting your esteemed co-operation and thanking you
+                                               in the mean while.</p></td>
+                                             </tr>
+                                           </tr>
+                                        
+                                          
+                                        <tr class=" pull-right-lg col-md-push-8 col-md-12 space-row col-xs-12" >          									
+                                            <th class="pull-right-lg  col-xs-12 awidt" >Yours Faithfully, </th>	
+                                        </tr> 
+                                          
+                                        
+                                          
+                                        <tr class=" pull-right-lg col-md-push-8 col-md-12 space-row col-xs-12"  style="padding-bottom:60px !important">          
+                                         <th class="  col-xs-12 awidt" >R. Surendrakumar </th>	
+                                       </tr> 
+    
+                               
+                             </tbody>
+                            
+                           </table>
+                    
+                        </div><!---carousel item-->   
+                         
+                      </div><!---carousel item-->       
+                           
+                    
+                           
+    
+        <!-----------------------Form 2--------------------------------------->
+        <div class="item  tradereport col-xs-12"> 
+                       
+              
+          <div class="form-row table-responsive bordwhite col-xs-12 heigh" id="form1" 
+          style="margin-left:10px;border:none;background-color:white;width:100% !important;height:1100px;overflow:auto !important;"> 
+
+           <table class="table" style="border:none;background-color:white;overflow: hidden !important;">
+              <tbody style="border:none;">
+
+                 <tr class="space-row bordwhite" style="border-spacing: 5px;">
+                   <th  class="reptitle text-center" style="text-align:center !important">SELLER CONFIRMATION </th>                          
+                  </tr>                        
+                   <!---section1-->
+                   <tr class="space-row col-xs-12" >                      
+                     <th class=" col-xs-12 col-sm-12">Con.no. </th>
+                     <td class=" col-xs-12 col-sm-12" id="tconfirmno-val"></td>	
+                  </tr>                        
+              
+                 <tr class="space-row col-xs-12" >          									
+                     <th class="pull-right-lg  col-xs-12" >Date: </th>	
+                     <td class="pull-right-lg  col-xs-12" id="tconfirmdate-val"></td>
+                   </tr> 
+      
+                  
+               
+                  
+                  <tr class="space-row col-xs-12 col-md-12 tabl"> 
+                    <th clss="col-xs-12">To - Buyer: </th>
+                  </tr>
+                    
+                  <tr class="space-row  col-xs-12" > 
+                   <td class="paddrl">
+                   <p id="buyerdetails-val" class="paddrl wordbrk"></p>
+                  </td>
+                  </tr>
+      
+               
+                   <tr class="space-row  col-xs-12" >
+                     <th class="col-xs-12">Dear sir,</th>                                                                                  
+                   </tr>
+      
+                   <tr class="space-row  col-xs-12 tabl">
+                   <tr class="space-row col-xs-12 col-md-12">  
+                    <td class="paddrl"> <p class="wordbrk" style="font-weight:600">I am pleased to confirm having this day 
+                      sold to you on account of my principals,</p></td>
+                   </tr>
+                   </tr>
+      
+                   <tr class="space-row col-xs-12 col-md-12 tabl" >    
+                     <tr class="space-row col-xs-12 col-md-12">                                    
+                      <td class="paddrl" style="font-weight:600;width:80px;" >Seller   </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;
+                       <p id="tdoor_add-val2s" class="paddrl wordbrk"></p>
+                       <span><th class="paddrl">,</th> </span> 
+                       </td>
+                     <td id="tstate-val2s" class="paddrl">
+                     <span><th class="paddrl">,</th> </span> 
+ 
+                     </td>
+                     <td id="tpincode-val2s" class="paddrl">
+                       <span><th class="paddrl">,</th> </span> 
+                       
+                       </td>
+                     </tr>
+                   </tr>        
+                          
+                   
+                            <tr class="space-row col-xs-12 col-md-12 tabl" >  
+                                
+                              <tr class="space-row col-xs-12 col-md-12">                             
+                               <td class="paddrl" style="font-weight:600;width:80px;" >Quality  </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;Station :</td><td id="tstation-val2" class="paddrl" >
+                              <span><th class="paddrl">,</th> </span></td> 
+      
+                              <td class="paddrl" >State :</td><td id="tstate_qual-valb" class="paddrl">
+                              <span><th class="paddrl">,</th> </span></td>   
+      
+                              <td class="paddrl" >Variety :</td><td id="tvariety-valb" class="paddrl">                           
+                              <span><th class="paddrl">,</th> </span></td>   
+                                                                      
+                               <td class="paddrl">Staple :</td><td id="tstaple-s-valb" class="paddrl">
+                               <span><th class="paddrl">,</th> </span></td>  
+                               
+                               <td class="paddrl">Mic :</td><td id="tmicfrom-s-valb" class="paddrl">                                    
+                               <span><th class="paddrl">,</th> </span></td>   
+      
+                              <td class="paddrl">GPT :</td><td id="tgpt-valb" class="paddrl ">
+                              <span><th class="paddrl">,</th> </span></td>
+      
+                              <td class="paddrl ">Grade :</td><td id="tgrade-val b" class=" paddrl ">
+                              <span><th class="paddrl">,</th> </span></td>
+      
+                              <td class="paddrl">Trash :</td><td id="ttrash-valb" class=" paddrl ">
+                              <span><th class="paddrl">,</th> </span></td>
+                            
+                               <td class="paddrl">Mositure :</td><td id="tmositure-s-valb" class="paddrl">
+                              <span><th class="paddrl">,</th> </span> </td>     
+                           </tr>
+      
+                             </tr>
+                             
+                    
+                          <tr class="space-row col-xs-12 col-md-12 tabl" >    
+                            <tr class="space-row col-xs-12 col-md-12">                                    
+                             <td class="paddrl" style="font-weight:600;width:80px;" >Quantity   </td> <td class="paddrl" > <span style="font-weight:600">:</span> &nbsp;HSN :</td><td id="thsn-valb" class="paddrl">
+                            <span><th class="paddrl">,</th> </span> 
+                            </td>                   
+                            <td class="paddrl">Truck :</td><td id="ttruck-valb" class="paddrl">
+                            <span><th class="paddrl">,</th> </span> 
+                            </td>
+                            </tr>
+                          </tr>
+      
+                         
+                                
+                               
+                             <tr class="space-row col-xs-12 col-md-12 tabl">                                       
+                              <th class="paddrl" style="width:80px;"> Dispatch  </th><td class="paddrl"   id="tdispatchdays-valb" > <span style="font-weight:600">:</span> &nbsp;
+                                                       
+                             </td>
+                             </tr>
+ 
+                             <tr class="space-row col-xs-12 col-md-12 tabl">                                      
+                               <th class="paddrl">Price  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                             
+                                <td id="tprice-valb" class="paddrl" >   
+                                 <span style="font-weight:600">: </span> &nbsp; Rs                                 
+                               <span><td class="paddrl"> <p class="wordbrk" style="font-weight:600">
+                                /- SPOT/CANDY + Lorry Freight + Transit Insurance + 5% GST.</p></td></span>
+                               </td>
+                              </tr>
+         
+ 
+                  
+ 
+      
+      
+                               <tr class="space-row col-xs-12 col-md-12 tabl">        
+                                <th class="paddrl" style="width:80px;">Payment </th>
+                              
+                               <td class="paddrl"   id="tprice-valb"> 
+                                 <span style="font-weight:600">:</span> &nbsp;
+                               </td>
+                               </tr>
+      
+                
+                                  <tr class="space-row col-xs-12 ">
+                                   <th class="paddrl" style="width:80px;">Note :</th>
+                                   <td class="paddrl" >
+                                     <p id="tnotes-val2" class="paddrl wordbrk"></p>
+                                   </td>
+                                   </tr>
+
+                                 <tr class="space-row ">
+                                  <tr class="space-row col-xs-12 col-md-12">  
+                                   <td class="paddrl" > <p class="wordbrk" style="font-weight:600">Expecting your esteemed co-operation and thanking you
+                                    in the mean while.</p></td>
+                                  </tr>
+                                </tr>
+                             
+                               
+                             <tr class=" pull-right-lg col-md-push-8 col-md-12 space-row col-xs-12" >          									
+                                 <th class="pull-right-lg  col-xs-12 awidt" >Yours Faithfully, </th>	
+                             </tr>                              
+                            
+                               
+                             <tr class=" pull-right-lg col-md-push-8 col-md-12 space-row col-xs-12"  style="padding-bottom:60px !important">          
+                              <th class="  col-xs-12 awidt" >R. Surendrakumar </th>	
+                            </tr>                    
+                 </tbody>                
+               </table>        
+            </div><!---carousel item-->               
+          </div><!---carousel item-->       
+               
+        
+      
+                   
+    <!----------------------------------------------------->
+    </div>       
+                  <a class="left carousel-control"  href="#myCarousel" data-slide="prev">
+                    <span class=" glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control"  href="#myCarousel" data-slide="next">
+                    <span class=" glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                
+                  <br><br><br>
+    
+              <!------------------------BUTTON--------------------------------->
+              <button class="btnsubmit"  value="Submit1" id="submittrade" style="display:none">Submit</button>			
+              <!----------------------BUTTON----------------------------------->
+           
+            </form>    
+        </div><!---Mycarousel-->
+    </div> <!---carousel inner-->	
+        
+    </section>     
+    <h2>
+      <span class="step-icon"></span>
+
+    </h2>
+    <section>
+                        
+      <h3  class="h3f" style="margin-left:0px">Email Details</h3>
+      <div style="margin-left:0px" class="section-title-divider"></div><br>
+
+      <div class="inner" style="margin-bottom:10px; margin-left:0px">
+      <div class="clearfix"></div>
+         
+              <div class="container input-group-sm mb-2 "style="margin-left:0px">
+                <label style="margin-left:-10px">Who do you want to send the SELLER email to?
+                </label>
+                <select id="framework" name="framework[]" multiple="multiple" class="form-control form-control-sm ">
+                  <option value="Broker">Broker</option>
+                  <option value="Seller">Seller</option>
+                  <option value="Trader1">Buyer1</option>
+                  <option  value="Trader2">Trader</option>
+                 </select>               
+             </div>
+            </br>   
+
+            <div class="container" style="margin-left:-20px">
+              <div class="card-deck col-md-12">
+                <div class="card col-md-3" style="margin-right:10px;">    
+                 <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                        
+                        
+                </div>
+               
+            
+                <div class="card col-md-3" style="margin-right:10px;">     
+                      <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                           
+                </div>
+              </div>
+           
+              <div class="card-deck col-md-12">
+               
+                <div class="card col-md-3" style="margin-right:10px;">         
+                      <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                                         
+              </div>
+  
+      <div class="card col-md-3" style="margin-right:10px;">     
+            <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                           
+      </div>
+      </div> 
+                
+          </div>
+</div>
+          </br>    </br>    </br>    </br> 
+
+        <div class="inner"  style="margin-bottom:10px;">
+          <div class="clearfix"></div>
+
+          <div class="container input-group-sm mb-2 "style="margin-left:0px">
+            <label style="margin-left:-10px">Who do you want to send the BUYER email to?
+
+            </label>
+            <select id="framework1" name="framework1[]" multiple="multiple" class="form-control form-control-sm ">
+              <option value="Broker">Broker</option>
+              <option value="Seller">Seller</option>
+              <option value="Trader1">Buyer1</option>
+              <option  value="Trader2">Trader</option>
+             </select>               
+         </div>
+        </br>   
+        <div class="container" style="margin-left:-20px">
+          <div class="card-deck col-md-12">
+            <div class="card col-md-3" style="margin-right:10px;">    
+             <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                         
+                    
+            </div>
+           
+        
+            <div class="card col-md-3" style="margin-right:10px;">     
+                  <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                           
+            </div>
+          </div>
+        <div class="card-deck col-md-12">
+           
+            <div class="card col-md-3" style="margin-right:10px;">         
+                  <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                                         
+          </div>
+
+  <div class="card col-md-3" style="margin-right:10px;">     
+        <label name="tdoor_add_s"   style="height:80px;" id="tdoor_add_s" >Details</label>                                           
+  </div>
+  </div>             
+      
+</div>
+
+ </br>    </br>    </br>    </br> <br><br><br><br><br><br>         <br><br><br>         <br><br>
+  </section>
+  <div class="clearfix"></div>
+
+
+  <!------------------------------------------------------------------>
+                      
+                  </div>		
+                 </form>     
+              </div>		
+          </div>
+       </div>
+    </div>
+   </div>
+ </div>
+</div>
+</div>
+
+<script type="text/javascript">
+  
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "200px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0px";	  
+  }
+
+  function report1function(e){
+    
+  var x=document.getElementById("repor1")
+  if (x.style.display === "none") {
+  x.style.display = "block";
+  e.preventDefault();
+  
+  } else {
+  x.style.display = "none";
+  }
+  }
+
+  var expanded = false;
+
+function showCheckboxes() {
+ 
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+</script>
+
+</body>
+</html>

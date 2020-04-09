@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cotton Sandhai -Account Profile - Edit </title>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/demo/site-demos.css">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/site-demos.css"/>
+	<link rel="stylesheet" href="vendor/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <script src="vendor/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>  
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="vendor/bootstrap/js/popper.min.js"></script>
+
+
+</head>
+
+<style>
+.btn-accountsave {
+  border:1px soild rgba(126, 197, 176, 0.993);
+  color: #fff !important;
+  background: rgba(126, 197, 176, 0.993) !important;
+  
+  padding:5px;
+  
+  width:65px;
+  margin-right:10px !important;
+  margin-top:0px;
+  background: rgba(126, 197, 176, 0.993) !important;
+  border-bottom-color: rgba(0,0,0,0.34);
+	text-shadow:0 1px 0 rgba(0,0,0,0.15);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+				      0 2px 0 -1px rgba(0,0,0,0.13), 
+				      0 3px 0 -1px rgba(0,0,0,0.08), 
+				      0 3px 13px -1px rgba(0,0,0,0.21);
+  }
+
+.btn-two {
+	color: white;	
+  padding: 5px;
+  display: inline-block;
+  width:65px;
+  margin-top:-5px !important;
+  margin-right:5px !important;
+  margin-left:10px !important;
+  background: rgba(126, 197, 176, 0.993) !important;
+  border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom-color: rgba(0,0,0,0.34);
+	text-shadow:0 1px 0 rgba(0,0,0,0.15);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+				      0 2px 0 -1px rgba(0,0,0,0.13), 
+				      0 3px 0 -1px rgba(0,0,0,0.08), 
+				      0 3px 13px -1px rgba(0,0,0,0.21);
+}
+
+.btn-two1 {
+	color: rgb(65, 63, 63);	
+	padding: 5px;
+  display: inline-block;
+  width:65px;
+  margin-top:-5px !important;
+  background: rgba(203, 204, 204, 0.993) !important;
+  border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom-color: rgba(0,0,0,0.34);
+	text-shadow:0 1px 0 rgba(0,0,0,0.15);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+				      0 2px 0 -1px rgba(0,0,0,0.13), 
+				      0 3px 0 -1px rgba(0,0,0,0.08), 
+				      0 3px 13px -1px rgba(0,0,0,0.21);
+}
+
+  body{
+    
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.1);
+   }
+
+  .card-group [class*='col-'] {
+  float:none;
+}
+.form-group label{ 
+padding:6px;
+margin-left:5px;
+font-weight:normal;
+font-size:14px;
+font-family: 'Montserrat';
+}
+@media screen and (min-device-width: 1008px) {
+  .wizard-v1-contentp   {
+    margin-top:50px;
+    margin-left:250px;
+    width: 100%;
+    height:600px !important;
+    background-color: #c1c1c1;
+  }
+  .wizard-v1-content{
+  margin-top:0px;
+  margin-left:400px;
+  height:auto;
+ }
+
+  .sidepanel  {
+      height:180%;
+  }
+  }
+
+  .profile-page .page-header {
+    height: 180px;
+    width:100%;
+    background-position: top center;
+    background-color:rgb(241, 244, 247);
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 20px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+.main-raised {
+  margin: -60px 0px 0px;
+    border-radius: 1px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.main {
+    background: #FFFFFF;   
+    z-index: 3;
+}
+
+.title{
+  text-align: left;
+  margin-left:0px;
+}
+
+.img-raised {
+    box-shadow: 0 16px 18px -12px rgba(0, 0, 0, 0.56), 0 4px 5px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.acsave {
+  padding: 10px;
+  margin-left:5px;
+}
+
+.form-group label{
+ 
+  padding:6px;
+}
+
+.form-group input{
+  padding:5px;
+  margin-left:0px;
+  border-radius: 5px;
+  border:1px solid rgb(216, 214, 214) !important;
+  box-shadow: none !important;
+}
+
+.form-group label{
+  color:rgb(111, 111, 114);
+}
+.card .card-body .heading{ border-top: 0px; }
+
+
+.card .card-body .ind{
+  margin-left:190px;
+}
+
+
+.profile-page .page-header {
+  height: 60px !important;
+  width: 100%;
+
+  background-color:rgb(77, 148, 228);
+}
+.form-group .lbl{
+ font-weight:600 !important;
+}
+.form-group label{ 
+padding:6px;
+margin-left:5px;
+font-weight:normal;
+font-size:14px;
+font-family: 'Montserrat';
+}
+.acch5{
+    font-size:14px;
+    margin-left:10px;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom:10px;
+  }
+@media (max-width:767px) {
+
+  .wizard-form{
+  
+  text-align:left !important;
+  margin-left:0px !important;
+}
+
+
+}
+</style>
+<body>
+ 
+  <div id="wrapper" class="wrapper">
+    <!---Top menu-->
+    <div class="top_navbar">		
+      <div class="openbtn" onclick="openNav()">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+      </div>
+      <div class="top_menu">
+      <div class="logo"><img src="images/logo3.jpg"/><br></div>
+  
+      <!---------Top nav Icons-->
+      <ul>  
+        <div class="dropdown">	
+          <li class="dropbtn">			
+          <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <span class="glyphicon glyphicon-user"></span>
+          </a>   
+          <div class="dropdown-menu dropdown-content dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown1">   
+            <a href="accountprofile.html">Account Info</a>
+            <a href="#">Payment Info</a>
+            <a href="#">Forgot Password</a>  
+           </div>
+          </li>
+          </div>
+         
+        <!-----Account Icon-->      
+      
+        <div class="dropdown">	
+        <li class="dropbtn">
+          <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <span class="glyphicon glyphicon-bell alertNotificacao"></span>
+            <span id="notificationsBadge" class='badgeAlert'>3</span>
+          </a>
+      
+          <div class="dropdown-menu notification dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown">
+            <div class="topc" >              
+            <h5 class="noticard-title">Notifications</h5>            
+            </div>       
+             
+            <div class="card noticard">
+              <div class="card-body">
+              <h5 class="card-title  noticard-title">Special title treatment</h5>
+              <p class="card-text noticart-text">With supporting text below as a natural lead-in to additional.</p>
+               
+              </div>
+              <div class="notisection-title-divider"></div>
+            </div>
+            
+            <div class="card noticard" >
+              <div class="card-body">
+              <h5 class="card-title noticard-title">Special title treatment</h5>
+              <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>
+               
+              </div>
+              <div class="notisection-title-divider"></div>
+            </div>
+            
+            <div class="card noticard" >
+              <div class="card-body">
+              <h5 class="card-title noticard-title">Special title treatment</h5>
+              <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>
+               
+              </div>
+            </div>
+            </div>
+                
+          </li>
+        </div>
+      
+         
+        
+        <!-----Logout Icon-->      
+          <div class="dropdown">	
+        <li class="dropbtn">			
+          <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          </a> 
+         </li>
+        </div>
+          
+          </ul>		
+        </div>
+        </div>
+      
+      
+  
+      <!-- Sidebar -->
+      <div id="mySidepanel" class="sidepanel">  
+      <ul class="sidebar-nav" id="">     
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      
+      <li><a href="traders.html" >Trades</a></li>
+          <li><a href="vendor.html">Vendors</a></li>
+      </ul>
+    </div>
+    
+   
+    <div class="wizard-v1-content mt10" >	
+      <div class="wizard-form">	
+        <section >     
+          <div class="tabcontainer2  container">              
+           
+         </div><!--pro page-->      
+                
+   <!--card group--->
+   
+   <div class="card-group">    
+    <form id="formaccount" action="editaccounttitle.html" method="get">   
+      <div class="col-md-12"> 
+            <div class="card border-light mb-3">  
+              <button type="submit" class="pencil" style="float:right;border:none;background:transparent;" > <i class="fa fa-pencil" aria-hidden="true"></i></button>  
+              <div class="card-body"> 
+               <div class="profile-page col-md-12 ">                                       
+                <!--div class="page-header header-filter" data-parallax="active" style="background-color:white;transform: translate3d(0px, 0px, 0px);"-->                      
+                <div class="headertitle col-md-12 col-xs-12">                                                     
+                <label class="col-md-8 col-xs-12 col-sm-12"
+                     style="text-align:center !important;color:white !important;"
+                     name="companyname" >Company name
+                </label>
+                </div>               
+                </div>
+              </div>       
+            </div>        
+            <!--/div-->          
+          </div>
+        </form>   
+    </div>
+
+        <div class="col-md-12">      
+                                
+                        <ul class="nav nav-tabs card-header-tabs" id="myTabs">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#company1">One</a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link" href="#company2">Two</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#company3">Three</a>
+                          </li>
+                        </ul>
+                    
+                        <div class="card-body tab-content">
+
+                          <div id="company1" class="tab-pane">
+                  
+                            <form id="formaccount" action="editaccount_company.html" method="get">     
+                              <div class="card border-light mb-3">
+                                <div class="card-block">
+                                  
+                                  <div class="card-header">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                      <h5 class="card-title mb-0">Company Details 1
+                                      <button type="submit" class="pencil"  > <i class="fa fa-pencil" aria-hidden="true"></i></button></h5>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="card-body"> 
+                                        
+                                     <div class="row form-group ">
+                                        <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="localcontactname">Company Name</label>                       
+                                      <label class=" col-sm-12 col-xs-12 col-md-8" name="companyname" id="companyname" for="">Susi commodities</label>                    
+                                      </div>
+                    
+                                     <div class="row form-group">   
+                                      <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="name">Company Email</label>                   
+                                     <label class="col-md-8 col-sm-12 col-xs-12" id="company_name" name="company_name">Susi@gmail.com</label>     
+                                     </div>
+                    
+                                     <div class="row form-group">	
+                                      <h5 class="acch5">Company Address</h5>
+                                     </div>  
+
+
+                                    <div class="row form-group">	
+                                      <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Door no & Street </label>										
+                                    <label  class="col-md-8 col-sm-12 col-xs-12" id="adddoor" name="adddoor">70, Alagai Nagar</label>
+                                    </div>
+                    
+                                    <div class="row form-group">
+                                      <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Locality</label>										
+                                    <label class="col-md-8 col-sm-12 col-xs-12" id="locality" name="locality">Madurai</label>                     
+                                   </div>
+                               
+                                    <div class="row form-group">
+                                    <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">State</label>										
+                                    <label   class="col-md-3 col-sm-12 col-xs-12" id="state" name="state">Tamilnadu</label>
+                                  </div>
+                               
+                                  <div class="row form-group">
+                                  <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Pincode</label>										
+                                 
+                                    <label   class=" col-md-3 col-sm-12 col-xs-12" id="pincode" name="pincode">928005</label>
+                                  </div>
+                               </div>
+                            </div>
+                        </div>
+                      </form>
+                   </div>
+                  
+
+                        <div id="company2" class="tab-pane active">
+                          
+                          <form id="formaccount" action="accountprofile.html" method="get">    
+                            <div class="card border-light mb-3">
+                              <div class="card-block">    
+                                  <div class="card-header">
+                                    <div class="d-flex  justify-content-between align-items-center mb-3">
+                                      <h5 class="card-title mb-0">Company2
+                                        <button type="submit" class="pencil"  > <i class="fa fa-pencil" aria-hidden="true"></i></button></h5>
+                                      </h5>
+                                     
+                                    </div>
+                                  </div>
+                                  <div class="card-body"> 
+                                        
+                                    <div class="row form-group ">
+                                       <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="localcontactname">Company Name</label>                       
+                                     <label class=" col-sm-12 col-xs-12 col-md-8" name="companyname" id="companyname" for="">Susi commodities</label>                    
+                                     </div>
+                   
+                                    <div class="row form-group">   
+                                     <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="name">Company Email</label>                   
+                                    <label class="col-md-8 col-sm-12 col-xs-12" id="company_name" name="company_name">Susi@gmail.com</label>     
+                                    </div>
+                   
+                                    <div class="row form-group">	
+                                     <h5 class="acch5">Company Address</h5>
+                                    </div>  
+
+
+                                   <div class="row form-group">	
+                                     <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Door no & Street </label>										
+                                   <label  class="col-md-8 col-sm-12 col-xs-12" id="adddoor" name="adddoor">70, Alagai Nagar</label>
+                                   </div>
+                   
+                                   <div class="row form-group">
+                                     <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Locality</label>										
+                                   <label class="col-md-8 col-sm-12 col-xs-12" id="locality" name="locality">Madurai</label>                     
+                                  </div>
+                              
+                                   <div class="row form-group">
+                                   <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">State</label>										
+                                   <label   class="col-md-3 col-sm-12 col-xs-12" id="state" name="state">Tamilnadu</label>
+                                 </div>
+                              
+                                 <div class="row form-group">
+                                 <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Pincode</label>										
+                                
+                                   <label   class=" col-md-3 col-sm-12 col-xs-12" id="pincode" name="pincode">928005</label>
+                                 </div>
+                              </div>
+                           </div>
+                       </div>
+                     </form>
+                  </div>
+                 
+                
+                       
+                
+                        
+                        <div id="company3" class="tab-pane">                    
+                
+                          <form id="formaccount" action="editaccount_company3.html" method="get">     
+                            <div class="card border-light mb-3">
+                              <div class="card-block">
+                                
+                                <div class="card-header">
+                                  <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="card-title mb-0">Company Details 3
+                                      <button type="submit" class="pencil"  > <i class="fa fa-pencil" aria-hidden="true"></i></button></h5>
+                                  </div>
+                                </div>
+                                
+                                <div class="card-body"> 
+                                        
+                                  <div class="row form-group ">
+                                     <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="localcontactname">Company Name</label>                       
+                                   <label class=" col-sm-12 col-xs-12 col-md-8" name="companyname" id="companyname" for="">Susi commodities</label>                    
+                                   </div>
+                 
+                                  <div class="row form-group">   
+                                   <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="name">Company Email</label>                   
+                                  <label class="col-md-8 col-sm-12 col-xs-12" id="company_name" name="company_name">Susi@gmail.com</label>     
+                                  </div>
+                 
+                                  <div class="row form-group">	
+                                   <h5 class="acch5">Company Address</h5>
+                                  </div>  
+
+
+                                 <div class="row form-group">	
+                                   <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Door no & Street </label>										
+                                 <label  class="col-md-8 col-sm-12 col-xs-12" id="adddoor" name="adddoor">70, Alagai Nagar</label>
+                                 </div>
+                 
+                                 <div class="row form-group">
+                                   <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Locality</label>										
+                                 <label class="col-md-8 col-sm-12 col-xs-12" id="locality" name="locality">Madurai</label>                     
+                                </div>
+                            
+                                 <div class="row form-group">
+                                 <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">State</label>										
+                                 <label   class="col-md-3 col-sm-12 col-xs-12" id="state" name="state">Tamilnadu</label>
+                               </div>
+                            
+                               <div class="row form-group">
+                               <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="address">Pincode</label>										
+                              
+                                 <label   class=" col-md-3 col-sm-12 col-xs-12" id="pincode" name="pincode">928005</label>
+                               </div>
+                            </div>
+                         </div>
+                     </div>
+                   </form>
+                </div>
+              </div>
+              <!-- END WIDGET 2 -->
+        </div>
+
+          <div class="col-md-12">
+            <form id="formaccount" action="accountprofile.html" method="get">    
+              <div class="card border-light mb-3">
+                <div class="card-block">    
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h5 class="card-title mb-0" >Contact Details
+                        <button type="cancel" class="mt-0 pull-right  btn-four" >Cancel</button>
+                        <button type="submit" class="mt-0 mr-5 pull-right btn-four1" style="margin-right:6px;">Save </button>
+                        </h5>                    
+                      
+                    </div>
+                  </div>
+                  <div class="card-body">                 
+                    <div class="row form-group">
+                      <h5 class="acch5">Proprietor/Director</h5>
+                      <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="proprietorDirectorName">Name </label>
+                  <input class="col-md-8 col-sm-12 col-xs-12" type="text" placeholder="Proprietor/Director Name"  id="proprietorDirectorName" name="proprietorDirectorName" >                  
+                    </div>
+
+                <div class="row form-group">
+                  <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="proprietorDirectorContact">Contact No </label>
+                  <input class="col-md-8 col-sm-12 col-xs-12" type="text" placeholder="Proprietor/Director Contact No" id="proprietorDirectorContact" name="proprietorDirectorContact">
+                </div>
+
+                <div class="row form-group">
+                  <h5 class="acch5">Local Contact</h5>
+                  <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="localcontactname">Name</label>
+                  <input type="text" class="col-md-8 col-sm-12 col-xs-12" placeholder="local contact name"  id="local_contact_name" name="local_contact_name" >
+                </div>
+
+                  <div class="row form-group">
+                    <label class="col-md-3 col-sm-12 col-xs-12 lbl" for="local"> Contact No </label>
+                    <input type="text" class="col-md-8 col-sm-12 col-xs-12" placeholder="Local Contact No"  id="local_contact_no" name="local_contact_no" >
+                </div>
+             
+             
+                </div> 
+              </div>
+          </div>
+        </form>
+  </div>
+   
+</div>
+</div>
+
+</div>
+
+ </section>
+</div><!--wiz form-->
+</div><!--wiz content-->  
+</div> <!--wrapper-->
+
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "200px";
+}    
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0px";	  
+}
+ 
+$(document).ready(function() {
+$('.nav-item a').on('click', function(e){
+var currentAttrValue = $(this).attr('href');
+// Show/Hide Tabs
+$('.tab-content ' + currentAttrValue).show().siblings().hide();
+// Change/remove current tab to active
+$(this).parent('li').addClass('active').siblings().removeClass('active');
+e.preventDefault();
+});
+});
+</script>
+</body>
+</html>

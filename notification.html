@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Cotton Sandhai - Vendor Details</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--link rel="stylesheet" href="vendor/responsive/css/responsive.bootstrap.min.css" type="text/css" /-->
+  <link rel="stylesheet" href="vendor/buttons/css/buttons.bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href= "vendor/datatable/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="vendor/buttons/css/buttons.bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="vendor/bootstrap-3.4.1-dist/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.css">    
+  
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>     <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/datatable/js/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatable/js/dataTables.bootstrap.min.js"></script>
+  <!--script src="vendor/responsive/js/responsive.bootstrap.min.js"></!--script-->
+  <script src="vendor/buttons/js/dataTables.buttons.min.js"></script>
+  <script src="vendor/buttons/js/buttons.bootstrap.min.js"></script>
+  <script src="vendor/buttons/js/buttons.html5.min.js"></script>
+  <script src="js/jquery.steps.js"></script>
+  <script src="js/main.js"></script>
+
+<style> 
+
+  .tabcontainer{
+  display:flex;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+  background-color:rgb(243, 243, 243) ;
+  padding-bottom:20px;
+  padding-top:20px;  
+  margin-left:280px;
+  margin-top:60px;
+  margin-right:20px;
+  max-width:79%;}
+
+
+ 
+  .sidepanel  {
+  height:180%;
+  }
+  @media screen and (min-device-width: 1008px) {
+  .inner  {
+    margin-left:530px;
+  
+  }
+}
+</style>
+</head>
+
+<body style="background-color:white">
+<!--Top menu-->
+
+<div id="wrapper"  class="wrapper">
+
+	<div class="top_navbar">		
+	  <div class="openbtn" onclick="openNav()">
+		 <div class="one"></div>
+		 <div class="two"></div>
+		 <div class="three"></div>
+	  </div>
+	  <div class="top_menu">
+		<div class="logo"><img src="images/logo3.jpg"/><br>
+    </div>
+    <!---------Top nav Icons-->
+    <ul>  
+      <div class="dropdown">	
+        <li class="dropbtn">			
+          <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          <span class="glyphicon glyphicon-user"></span>
+          </a>   
+          <div class="dropdown-menu dropdown-content dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown1">   
+            <a href="accountprofile.html">Account Info</a>
+            <a href="#">Payment Info</a>
+            <a href="#">Forgot Password</a>  
+         </div>
+        </li>
+        </div>
+       
+    <!-----Account Icon-->      
+
+    <div class="dropdown">	
+      <li class="dropbtn">
+          <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <span class="glyphicon glyphicon-bell alertNotificacao"></span>
+            <span id="notificationsBadge" class='badgeAlert'>3</span>
+          </a>
+
+          <div class="dropdown-menu notification dropdown-menu-right" role="menu" aria-labelledby="navbarDropdown">
+            <div class="topc" >              
+              <h5 class="noticard-title">Notifications</h5>            
+            </div>       
+             
+              <div class="card noticard">
+                <div class="card-body">                 
+                  <p class="card-text noticart-text">With supporting text below as a natural lead-in to additional.</p>                 
+                </div>
+                <div class="notisection-title-divider"></div>
+              </div>
+              
+              <div class="card noticard" >
+                <div class="card-body">                  
+                  <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>                 
+                </div>
+                <div class="notisection-title-divider"></div>
+              </div>
+              
+              <div class="card noticard" >
+                <div class="card-body">               
+                  <p class="card-text  noticart-text">With supporting text below as a natural lead-in to additional content.</p>                 
+                </div>
+              </div>
+              <div class="topc1" >              
+                <h5 class="noticard-title1 h51"><a href="notification.html">View more Notifications</a></h5>            
+              </div>   
+						</div>
+					    
+          </li>
+      </div>
+
+     
+	
+    <!-----Logout Icon-->      
+		<div class="dropdown">	
+      <li class="dropbtn">			
+        <a href="#"  class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <span class="glyphicon glyphicon-arrow-right"></span>
+        </a> 
+       </li>
+      </div>
+  	  
+		</ul>		
+	  </div>
+	</div>
+
+
+  <!-- Sidebar -->
+  <div id="mySidepanel" class="sidepanel">  
+     <ul class="sidebar-nav" id="">     
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+     
+        <li><a href="traders.html" >Trades</a></li>
+        <li><a href="vendor.html">Vendors</a></li>         
+     </ul>
+  </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper">
+      <div class="row">
+        <div class="col-md-9">
+
+<section >
+                      
+  <div class="inner">
+                                  
+  <div class="notification1" >
+    <div class="topc2" >              
+      <h5 class="noticard-title">Notifications</h5>            
+    </div>       
+     
+    <div class="card" style="width:100%;" >
+        <div class="card-body">        
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        
+        </div>
+      </div>
+      
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+      
+      <div class="card " >
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         
+        </div>
+      </div>
+                   
+      
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+      
+      <div class="card " >
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         
+        </div>
+      </div>
+
+
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+      
+      <div class="card " >
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         
+        </div>
+      </div>
+
+      <div class="card ">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+      </div>
+      
+      <div class="card " >
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+         
+        </div>
+      </div>
+     </div>
+    </section>		
+                    
+                  
+  </div>
+  </div>
+</div>
+
+
+
+
+
+  
+ 
+
+
+
+
+ 
+
+
+</body>
+</html>
